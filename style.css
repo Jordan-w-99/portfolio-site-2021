@@ -1,4 +1,5 @@
 body {
+  font-family: "Montserrat", sans-serif;
   margin: 50px 0 50px 0;
   background: #164A41;
   background: linear-gradient(100deg, #164A41 0%, #4D774E 70%, #9DC88D 120%);
@@ -17,6 +18,7 @@ body #main {
   height: calc(100vh - 50px * 2);
   width: 60%;
   min-width: 550px;
+  max-width: 900px;
   -webkit-box-shadow: 5px 5px 10px 2px rgba(0, 0, 0, 0.25);
           box-shadow: 5px 5px 10px 2px rgba(0, 0, 0, 0.25);
   background: #9DC88D;
@@ -40,10 +42,13 @@ body #main #nav-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  width: 95%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 90%;
   height: calc(60px - 4px);
   background: -webkit-gradient(linear, left top, right top, from(#4D774E), color-stop(200%, #164A41));
   background: linear-gradient(90deg, #4D774E 0%, #164A41 200%);
@@ -56,10 +61,34 @@ body #main #nav-container {
           transform: translateX(-25px);
 }
 
+body #main #nav-container #nav-logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 40px;
+  height: 40px;
+  font-size: 16pt;
+  background: #F1B24A;
+  border-radius: 5px;
+  margin-left: 10px;
+  color: #FFFFFF;
+  text-shadow: 1.5px 1.5px black;
+  border-width: 3px;
+  border-style: solid;
+  -o-border-image: linear-gradient(-120deg, #9DC88D 0%, #164A41 100%) 1;
+     border-image: linear-gradient(-120deg, #9DC88D 0%, #164A41 100%) 1;
+  font-family: "Roboto", sans-serif;
+}
+
 body #main #nav-container nav {
-  width: 90%;
+  width: 70%;
   height: 100%;
-  background: red;
   -webkit-transform: skew(4deg);
           transform: skew(4deg);
   display: -webkit-box;
@@ -68,9 +97,18 @@ body #main #nav-container nav {
 }
 
 body #main #nav-container nav .nav-link-container {
+  color: white;
+  font-family: "Montserrat", sans-serif;
   text-decoration: none;
   width: 100px;
+  min-width: 80px;
   text-align: center;
   margin: auto;
+  margin-bottom: 5px;
+  text-shadow: 1px 1px black;
+}
+
+body #main #nav-container nav .nav-link-container:active {
+  color: lightgray;
 }
 /*# sourceMappingURL=style.css.map */

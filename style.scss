@@ -7,7 +7,12 @@ $white: #FFFFFF;
 $margin-height: 50px;
 $nav-height: 60px;
 
+$header-font: 'Roboto', sans-serif;
+$body-font: 'Montserrat', sans-serif;
+
 body {
+    font-family: $body-font;
+
     margin: $margin-height 0 $margin-height 0;
     background: $dark;
     background: linear-gradient(100deg, $dark 0%, $medium 70%, $light 120%);
@@ -22,6 +27,7 @@ body {
         height: calc(100vh - #{$margin-height} * 2);
         width: 60%;
         min-width: 550px;
+        max-width: 900px;
         box-shadow: 5px 5px 10px 2px rgba(0, 0, 0, 0.25);
         background: $light;
         background: linear-gradient(-90deg, $light -100%, $white 100%);
@@ -40,8 +46,9 @@ body {
 
         #nav-container {
             display: flex;
-            justify-content: center;
-            width: 95%;
+            justify-content: space-between;
+            align-items: center;
+            width: 90%;
             height: calc(#{$nav-height} - 4px);
             background: linear-gradient(90deg, $medium 0%, $dark 200%);
             border-bottom: $contrast 4px solid;
@@ -51,19 +58,45 @@ body {
             position: absolute;
             transform: translateX(-25px);
 
+            #nav-logo {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 40px;
+                height: 40px;
+                font-size: 16pt;
+                background: $contrast;
+                border-radius: 5px;
+                margin-left: 10px;
+                color: $white;
+                text-shadow: 1.5px 1.5px black;
+                border-width: 3px;
+                border-style: solid;
+                border-image: linear-gradient(-120deg, $light 0%, $dark 100%) 1;
+                font-family: $header-font;
+            }
+
             nav {
-                width: 90%;
+                width: 70%;
                 height: 100%;
-                background: red;
                 transform: skew(4deg);
                 display: flex;
-
+                
                 .nav-link-container {
+                    color: white;
+                    font-family: $body-font;
                     text-decoration: none;
                     width: 100px;
+                    min-width: 80px;
                     text-align: center;
                     margin: auto;
-                }   
+                    margin-bottom: 5px;
+                    text-shadow: 1px 1px black;
+                }
+
+                .nav-link-container:active {
+                    color: lightgray;
+                }
             }
         }
     }
