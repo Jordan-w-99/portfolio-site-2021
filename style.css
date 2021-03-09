@@ -1,0 +1,76 @@
+body {
+  margin: 50px 0 50px 0;
+  background: #164A41;
+  background: linear-gradient(100deg, #164A41 0%, #4D774E 70%, #9DC88D 120%);
+  position: relative;
+  z-index: -1;
+}
+
+body #main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: right;
+      -ms-flex-pack: right;
+          justify-content: right;
+  margin: 0 auto 0 auto;
+  height: calc(100vh - 50px * 2);
+  width: 60%;
+  min-width: 550px;
+  -webkit-box-shadow: 5px 5px 10px 2px rgba(0, 0, 0, 0.25);
+          box-shadow: 5px 5px 10px 2px rgba(0, 0, 0, 0.25);
+  background: #9DC88D;
+  background: -webkit-gradient(linear, right top, left top, color-stop(-100%, #9DC88D), to(#FFFFFF));
+  background: linear-gradient(-90deg, #9DC88D -100%, #FFFFFF 100%);
+  position: relative;
+  -webkit-transform: skew(-4deg);
+          transform: skew(-4deg);
+}
+
+body #main #nav-tag {
+  background: linear-gradient(120deg, #164A41 0%, #4D774E 130%);
+  width: 25px;
+  height: 60px;
+  position: absolute;
+  -webkit-transform: skewY(30deg) translate(-25px, 32px);
+          transform: skewY(30deg) translate(-25px, 32px);
+}
+
+body #main #nav-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 95%;
+  height: calc(60px - 4px);
+  background: -webkit-gradient(linear, left top, right top, from(#4D774E), color-stop(200%, #164A41));
+  background: linear-gradient(90deg, #4D774E 0%, #164A41 200%);
+  border-bottom: #F1B24A 4px solid;
+  margin: 10px 0;
+  -webkit-box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.25);
+          box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.25);
+  position: absolute;
+  -webkit-transform: translateX(-25px);
+          transform: translateX(-25px);
+}
+
+body #main #nav-container nav {
+  width: 90%;
+  height: 100%;
+  background: red;
+  -webkit-transform: skew(4deg);
+          transform: skew(4deg);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+body #main #nav-container nav .nav-link-container {
+  text-decoration: none;
+  width: 100px;
+  text-align: center;
+  margin: auto;
+}
+/*# sourceMappingURL=style.css.map */
