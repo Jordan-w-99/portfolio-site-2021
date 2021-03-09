@@ -1,0 +1,48 @@
+@media only screen and (max-width: 760px) {
+    $dark: #164A41;
+    $medium: #4D774E;
+    $light: #9DC88D;
+    $contrast: #F1B24A;
+    $white: #FFFFFF;
+
+    $margin-height: 50px;
+    $nav-height: 60px;
+
+    $header-font: 'Roboto', sans-serif;
+    $body-font: 'Montserrat', sans-serif;
+
+    body {
+
+        #main {
+            width: 90%;
+            min-width: 90%;
+            transform: skew(0deg);
+
+            #nav-tag {
+                width: 15px;
+    
+                position: absolute;
+                transform: skewY(30deg) translate(-15px, 24px);
+            }
+
+            #nav-expand{
+                display:block;
+                margin-right: 5px;
+                color: white;
+                transform: scaleY(2) skew(3deg) ;
+                cursor: pointer;
+                transition: 0.3s;
+            }
+
+            #nav-container {
+
+                transform: skew(-3deg) translateX(-15px);
+                width: 78px;
+
+                #nav {
+                    display: none;
+                }
+            }
+        }
+    }
+}

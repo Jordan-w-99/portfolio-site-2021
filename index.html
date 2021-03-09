@@ -9,6 +9,8 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="mobile-style.css">
+
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link
         href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;700&family=Roboto:wght@400;700&display=swap"
@@ -18,11 +20,12 @@
 <body>
     <div id="main">
         <div id="nav-tag"></div>
-        <div id="nav-container">
+        <div id="nav-container" onmouseover="expandNav()" onmouseout="collapseNav()">
             <div id="nav-logo">
                 JW
             </div>
-            <nav>
+            
+            <nav id="nav">
                 <a href="" class="nav-link-container">
                     Work
                 </a>
@@ -34,7 +37,10 @@
                 </a>
 
             </nav>
-            </nav>
+
+            <div id="nav-expand" onclick="expandNav()">
+                >
+            </div>
         </div>
     </div>
 

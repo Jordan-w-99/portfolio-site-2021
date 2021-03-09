@@ -26,14 +26,14 @@ body {
         margin: 0 auto 0 auto;
         height: calc(100vh - #{$margin-height} * 2);
         width: 60%;
-        min-width: 550px;
+        min-width: 700px;
         max-width: 900px;
         box-shadow: 5px 5px 10px 2px rgba(0, 0, 0, 0.25);
         background: $light;
         background: linear-gradient(-90deg, $light -100%, $white 100%);
 
         position: relative;
-        transform: skew(-4deg);
+        transform: skew(-3deg);
 
         #nav-tag {
             background: linear-gradient(120deg, $dark 0%, $medium 130%);
@@ -42,6 +42,10 @@ body {
 
             position: absolute;
             transform: skewY(30deg) translate(-25px, 32px);
+        }
+
+        #nav-expand{
+            display:none;
         }
 
         #nav-container {
@@ -58,11 +62,14 @@ body {
             position: absolute;
             transform: translateX(-25px);
 
+            transition: 0.2s ease-in-out;
+
             #nav-logo {
                 display: flex;
                 justify-content: center;
                 align-items: center;
                 width: 40px;
+                min-width: 40px;
                 height: 40px;
                 font-size: 16pt;
                 background: $contrast;
@@ -74,12 +81,13 @@ body {
                 border-style: solid;
                 border-image: linear-gradient(-120deg, $light 0%, $dark 100%) 1;
                 font-family: $header-font;
+                cursor: pointer;
             }
 
-            nav {
+            #nav {
                 width: 70%;
                 height: 100%;
-                transform: skew(4deg);
+                transform: skew(3deg);
                 display: flex;
                 
                 .nav-link-container {
@@ -92,6 +100,7 @@ body {
                     margin: auto;
                     margin-bottom: 5px;
                     text-shadow: 1px 1px black;
+                    overflow: hidden;
                 }
 
                 .nav-link-container:active {

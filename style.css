@@ -17,7 +17,7 @@ body #main {
   margin: 0 auto 0 auto;
   height: calc(100vh - 50px * 2);
   width: 60%;
-  min-width: 550px;
+  min-width: 700px;
   max-width: 900px;
   -webkit-box-shadow: 5px 5px 10px 2px rgba(0, 0, 0, 0.25);
           box-shadow: 5px 5px 10px 2px rgba(0, 0, 0, 0.25);
@@ -25,8 +25,8 @@ body #main {
   background: -webkit-gradient(linear, right top, left top, color-stop(-100%, #9DC88D), to(#FFFFFF));
   background: linear-gradient(-90deg, #9DC88D -100%, #FFFFFF 100%);
   position: relative;
-  -webkit-transform: skew(-4deg);
-          transform: skew(-4deg);
+  -webkit-transform: skew(-3deg);
+          transform: skew(-3deg);
 }
 
 body #main #nav-tag {
@@ -36,6 +36,10 @@ body #main #nav-tag {
   position: absolute;
   -webkit-transform: skewY(30deg) translate(-25px, 32px);
           transform: skewY(30deg) translate(-25px, 32px);
+}
+
+body #main #nav-expand {
+  display: none;
 }
 
 body #main #nav-container {
@@ -59,6 +63,8 @@ body #main #nav-container {
   position: absolute;
   -webkit-transform: translateX(-25px);
           transform: translateX(-25px);
+  -webkit-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
 }
 
 body #main #nav-container #nav-logo {
@@ -72,6 +78,7 @@ body #main #nav-container #nav-logo {
       -ms-flex-align: center;
           align-items: center;
   width: 40px;
+  min-width: 40px;
   height: 40px;
   font-size: 16pt;
   background: #F1B24A;
@@ -84,19 +91,20 @@ body #main #nav-container #nav-logo {
   -o-border-image: linear-gradient(-120deg, #9DC88D 0%, #164A41 100%) 1;
      border-image: linear-gradient(-120deg, #9DC88D 0%, #164A41 100%) 1;
   font-family: "Roboto", sans-serif;
+  cursor: pointer;
 }
 
-body #main #nav-container nav {
+body #main #nav-container #nav {
   width: 70%;
   height: 100%;
-  -webkit-transform: skew(4deg);
-          transform: skew(4deg);
+  -webkit-transform: skew(3deg);
+          transform: skew(3deg);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-body #main #nav-container nav .nav-link-container {
+body #main #nav-container #nav .nav-link-container {
   color: white;
   font-family: "Montserrat", sans-serif;
   text-decoration: none;
@@ -106,9 +114,10 @@ body #main #nav-container nav .nav-link-container {
   margin: auto;
   margin-bottom: 5px;
   text-shadow: 1px 1px black;
+  overflow: hidden;
 }
 
-body #main #nav-container nav .nav-link-container:active {
+body #main #nav-container #nav .nav-link-container:active {
   color: lightgray;
 }
 /*# sourceMappingURL=style.css.map */

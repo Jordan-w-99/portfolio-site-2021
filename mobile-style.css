@@ -1,0 +1,33 @@
+@media only screen and (max-width: 760px) {
+  body #main {
+    width: 90%;
+    min-width: 90%;
+    -webkit-transform: skew(0deg);
+            transform: skew(0deg);
+  }
+  body #main #nav-tag {
+    width: 15px;
+    position: absolute;
+    -webkit-transform: skewY(30deg) translate(-15px, 24px);
+            transform: skewY(30deg) translate(-15px, 24px);
+  }
+  body #main #nav-expand {
+    display: block;
+    margin-right: 5px;
+    color: white;
+    -webkit-transform: scaleY(2) skew(3deg);
+            transform: scaleY(2) skew(3deg);
+    cursor: pointer;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+  }
+  body #main #nav-container {
+    -webkit-transform: skew(-3deg) translateX(-15px);
+            transform: skew(-3deg) translateX(-15px);
+    width: 78px;
+  }
+  body #main #nav-container #nav {
+    display: none;
+  }
+}
+/*# sourceMappingURL=mobile-style.css.map */
